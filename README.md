@@ -8,6 +8,6 @@ and So I am.
 
 ## Authors
 
-- Linkedin [@adityapanwars](www.linkedin.com/in/adityapanwars)
-- Instagram [@adityapanwarrr](www.instagram.com/in/adityapanwarrr)
+- [@Aditya](https://www.github.com/BANZOM)
+
 
