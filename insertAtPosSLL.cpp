@@ -42,7 +42,7 @@ NODE insertAtpos(NODE first, int pos, int x)
     {
         if (pos == 1)
         {
-            n->next = first->next;
+            n->next = node->next;
             first = n;
         }
 
@@ -64,3 +64,4 @@ NODE insertAtpos(NODE first, int pos, int x)
         }
         return first;
     }
+}
