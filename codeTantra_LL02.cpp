@@ -1,72 +1,75 @@
-#include<iostream>
-#include<stdlib.h>
+#include <iostream>
+#include <stdlib.h>
 using namespace std;
 
-struct head{
+struct head
+{
     int data;
     struct head *next;
 };
 typedef struct head *NODE;
 
-NODE createNode(){
+NODE createNode()
+{
     NODE newNode;
-    newNode = (NODE) malloc(sizeof(struct head));
-    newNode->next=NULL;
+    newNode = (NODE)malloc(sizeof(struct head));
+    newNode->next = NULL;
     return newNode;
 }
 
-NODE addNodes(NODE first,int x){
-    NODE node,c ;
-    
-    node=first;
-    c=createNode();
-    c->data=x;    
-    if(node==NULL){
-        
-        first=c;
+NODE addNodes(NODE first, int x)
+{
+    NODE node, c;
+
+    node = first;
+    c = createNode();
+    c->data = x;
+    if (node == NULL)
+    {
+
+        first = c;
     }
-    else{
-        while(node->next!=NULL){
-            node=node->next;
+    else
+    {
+        while (node->next != NULL)
+        {
+            node = node->next;
         }
-        node->next=c;
+        node->next = c;
     }
     return first;
 }
 
-
-void traverseList(NODE first){
+void traverseList(NODE first)
+{
     NODE x;
-    x=first;
-    while(x !=NULL){
-        printf("%d-->",x->data);
-        x=x->next;
+    x = first;
+    while (x != NULL)
+    {
+        printf("%d-->", x->data);
+        x = x->next;
     }
     printf("NULL");
 }
 
-
-
-
 int main()
-{  
+{
     NODE first = NULL;
     int x;
 
-    cout<<"Enter elements upto -1 :";
-    cin>>x;
-    while(x != -1)
+    cout << "Enter elements upto -1 :";
+    cin >> x;
+    while (x != -1)
     {
-        first = addNodes(first,x);
+        first = addNodes(first, x);
         // printf("\n**%d",first->data);
-        cin>>x;
+        cin >> x;
     }
-    if(first== NULL)
-        cout<<"The Single linked list is empty"<<endl;
+    if (first == NULL)
+        cout << "The Single linked list is empty" << endl;
     else
     {
-        cout<<"The Elements in SLL are: ";
+        cout << "The Elements in SLL are: ";
         traverseList(first);
     }
-    
 }
