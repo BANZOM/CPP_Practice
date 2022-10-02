@@ -16,4 +16,7 @@ NODE createNode(){
     return newNode;
 }
 
-// NODE
+NODE insertAtpos(NODE first,int pos,int x)
+{
+    
+}
