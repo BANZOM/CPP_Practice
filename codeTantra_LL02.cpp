@@ -20,19 +20,16 @@ NODE addNodes(NODE first,int x){
     
     node=first;
     c=createNode();
-    
+    c->data=x;    
     if(node==NULL){
         
         first=c;
-        first->data=x;
     }
     else{
-        
-        while(node != NULL){
+        while(node->next!=NULL){
             node=node->next;
         }
         node->next=c;
-        c->data=x;
     }
     return first;
 }
