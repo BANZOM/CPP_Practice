@@ -17,51 +17,55 @@ NODE createNode()
     return newNode;
 }
 
-NODE insertAtpos(NODE first, int pos, int x)
+NODE insertAtpos (NODE first, int pos, int x)
 {
-    NODE n, node;
-    node = first;
-    n = createNode();
-    n->data = x;
+  NODE n, node;
+  node = first;
+  n = createNode ();
+  n->data = x;
 
-    // no. of nodes in a list
-    int count = 0;
-    while (node->next != NULL)
+  // no. of nodes in a list
+  if (node == NULL && pos == 1)
     {
-        count++;
-        node = node->next;
+      first = n;
+      return first;
     }
 
-    if (node == NULL && pos == 1)
+  else
     {
-        first = n;
-        return first;
-    }
+      if (pos == 1)
+	{
+	  n->next = first;
+	  first = n;
+	}
 
-    else
+      else
+	{
+	  int i = 2;
+	  while (i < pos)	// traverse till position
+	    {
+	      node = node->next;
+	      i++;
+	    }
+
+	  // updating the link
+	  n->next = node->next;
+	  node->next = n;
+	}
+      return first;
+    }
+}
+
+
+void
+traverseList (NODE first)
+{
+  NODE x;
+  x = first;
+  while (x != NULL)
     {
-        if (pos == 1)
-        {
-            n->next = node->next;
-            first = n;
-        }
-
-        else
-        {
-            int tempCount = 0;
-            while (node != NULL)
-            {
-                tempCount++;
-                if (tempCount == pos)
-                {
-                    break;
-                }
-                node = node->next;
-            }
-
-            n->next = node->next;
-            node->next = n;
-        }
-        return first;
+      printf ("%d-->", x->data);
+      x = x->next;
     }
+  printf ("NULL");
 }
