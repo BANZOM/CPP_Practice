@@ -20,6 +20,6 @@ int main()
     }
 
     cout << "The binary form is : " << answer << endl;
-    cout << "The binary form in signed magnitude if the number was negative is : " << pow(10, i) + answer << endl;
+    // cout << "The binary form in signed magnitude if the number was negative is : " << pow(10, i) + answer << endl;
     return 0;
 }
