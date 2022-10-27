@@ -12,34 +12,22 @@ int main()
 
     // logic
     unsigned long long int i = 0;
-    if (n >= 0)
+    if (n < 0)
     {
-        while (n != 0)
-        {
-            int bit = n & 1;
-            answer = (bit * pow(10, i)) + answer;
-            n = n >> 1;
-            i++;
-        }
+        n = pow(2, 16) + n;
     }
 
-    else
+    while (n)
     {
-        i = 0;
-        n = pow(2,16) + n;
-        // assuming we have 16 bit integer
-        while (n)
-        {
-            int bit = n & 1;
-            // cout << "**" << bit << "**" << endl;
-            answer += (bit * pow(10, i));
-            // cout << "****" << answer << "****" << endl;
-            n = n >> 1;
-            i++;
-        }
+        int lsb = n & 1;
+        answer += (lsb * pow(10, i));
+        n = n >> 1;
+        i++;
     }
 
     cout << "The binary form is : " << answer << endl;
+
     // cout << "The binary form in signed magnitude if the number was negative is : " << pow(10, i) + answer << endl;
+
     return 0;
 }
