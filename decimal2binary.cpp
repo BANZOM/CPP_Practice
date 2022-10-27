@@ -5,12 +5,13 @@ using namespace std;
 
 int main()
 {
-    int n, answer = 0;
+    long long int n;
+    unsigned long long int answer = 0;
     cout << "Enter the decimal number: ";
     cin >> n;
 
     // logic
-    int i = 0;
+    unsigned long long int i = 0;
     if (n >= 0)
     {
         while (n != 0)
@@ -25,12 +26,14 @@ int main()
     else
     {
         i = 0;
-        while (n != 1)
+        n = pow(2,16) + n;
+        // assuming we have 16 bit integer
+        while (n)
         {
-            bool bit = n ^ 0;
-            cout<<"**"<<bit<<"**"<<endl;
+            int bit = n & 1;
+            // cout << "**" << bit << "**" << endl;
             answer += (bit * pow(10, i));
-            cout<<"****"<<answer<<"****"<<endl;
+            // cout << "****" << answer << "****" << endl;
             n = n >> 1;
             i++;
         }
