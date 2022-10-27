@@ -30,4 +30,5 @@ int main()
     cout<<"Enter a number: ";
     cin >> num;
     cout <<"The reverse is : "<< reverse(num) << endl;
-};
+    return 0;
+}
