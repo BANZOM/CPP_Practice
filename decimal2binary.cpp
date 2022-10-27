@@ -11,12 +11,29 @@ int main()
 
     // logic
     int i = 0;
-    while (n != 0)
+    if (n >= 0)
     {
-        int bit = n & 1;
-        answer = (bit * pow(10, i)) + answer;
-        n = n >> 1;
-        i++;
+        while (n != 0)
+        {
+            int bit = n & 1;
+            answer = (bit * pow(10, i)) + answer;
+            n = n >> 1;
+            i++;
+        }
+    }
+
+    else
+    {
+        i = 0;
+        while (n != 1)
+        {
+            bool bit = n ^ 0;
+            cout<<"**"<<bit<<"**"<<endl;
+            answer += (bit * pow(10, i));
+            cout<<"****"<<answer<<"****"<<endl;
+            n = n >> 1;
+            i++;
+        }
     }
 
     cout << "The binary form is : " << answer << endl;
