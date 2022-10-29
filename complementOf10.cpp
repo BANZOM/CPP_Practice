@@ -8,6 +8,11 @@ int main()
     unsigned long long int num, copy, mask, complement;
     cout << "Enter a decimal number: ";
     cin >> num;
+    if (num == 0)
+    {
+        cout << "The Complement is: 1" << endl;
+        return 0;
+    }
 
     copy = num;
     int i = 0;
@@ -28,3 +33,24 @@ int main()
     cout << "The Complement is: " << complement << endl;
     return 0;
 }
+
+/**
+ *
+ * 
+Another approach:
+
+int bitwiseComplement(int n) {
+    if(n==0)
+        return 1;
+    int mask=0,copy=n;
+
+    while (copy)
+    {
+        mask= (mask<<1) | 1;
+        copy = copy >> 1;
+    }
+
+    return (~n) & mask;
+    }
+ *
+ */
