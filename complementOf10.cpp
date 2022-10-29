@@ -8,6 +8,8 @@ int main()
     unsigned long long int num, copy, mask, complement;
     cout << "Enter a decimal number: ";
     cin >> num;
+
+    // Edge case: number = 0 
     if (num == 0)
     {
         cout << "The Complement is: 1" << endl;
