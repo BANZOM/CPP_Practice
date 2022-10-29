@@ -27,8 +27,8 @@ int reverse(int x)
 int main()
 {
     int num;
-    cout<<"Enter a number: ";
+    cout << "Enter a number: ";
     cin >> num;
-    cout <<"The reverse is : "<< reverse(num) << endl;
+    cout << "The reverse is : " << reverse(num) << endl;
     return 0;
 }
