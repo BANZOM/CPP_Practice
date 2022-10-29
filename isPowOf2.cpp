@@ -10,7 +10,8 @@ int main()
     cout << "Enter a number: ";
     cin >> num;
     int i = 0;
-    while (num < pow(2, i))
+
+    while (i<31)
     {
         if (pow(2, i) == num)
         {
@@ -20,5 +21,5 @@ int main()
         i++;
     }
     cout << "FALSE" << endl;
-    return 0;
+    // return 0;
 }
