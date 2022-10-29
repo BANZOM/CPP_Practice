@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    unsigned long long int num, copy;
+    unsigned long long int num, copy, mask;
     cout << "Enter a decimal number: ";
     cin >> num;
 
@@ -16,5 +16,8 @@ int main()
         i++;
         copy = copy >> 1;
     }
-    cout<<i<<endl;
+    // cout<<i<<endl;
+
+    mask = pow(2, i) - 1;
+    cout << mask << endl;
 }
