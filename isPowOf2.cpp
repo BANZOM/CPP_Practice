@@ -9,4 +9,16 @@ int main()
     cout << "**RETURN TRUE IF IS A POWER OF 2 ELSE RETURN FALSE**" << endl;
     cout << "Enter a number: ";
     cin >> num;
+    int i = 0;
+    while (num < pow(2, i))
+    {
+        if (pow(2, i) == num)
+        {
+            cout << "TRUE" << endl;
+            return 0;
+        }
+        i++;
+    }
+    cout << "FALSE" << endl;
+    return 0;
 }
