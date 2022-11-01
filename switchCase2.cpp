@@ -12,7 +12,7 @@
 using namespace std;
 int main()
 {
-    int amt, choice, temp;
+    int amt, choice, temp, temp2, temp3;
     cout << "Enter the amount: ";
     cin >> amt;
     cout << "Total no. of \n1. 100 Rs\n2. 50 Rs\n3. 20 Rs \n4. 1 Rs\nChoose one: ";
@@ -30,17 +30,17 @@ int main()
         // break;
 
     case 3:
-        int temp2 = amt - ((amt / 100) * 100);
+        temp2 = amt - ((amt / 100) * 100);
         temp = temp2 - ((temp2 / 50) * 50);
         cout << temp / 20 << " notes of 20 is needed at max.\n";
         // break;
 
     case 4:
-        int temp2 = amt - ((amt / 100) * 100);
-        int temp3 = temp2 - ((temp2 / 50) * 50);
-        temp = temp3 - ((temp3/20) * 20);
+        temp2 = amt - ((amt / 100) * 100);
+        temp3 = temp2 - ((temp2 / 50) * 50);
+        temp = temp3 - ((temp3 / 20) * 20);
         cout << temp / 1 << " notes of 1 is needed at max.\n";
-        // break;
+        break;
 
     default:
         cout << "Invalid choice" << endl;
