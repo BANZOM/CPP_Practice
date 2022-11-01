@@ -33,12 +33,14 @@ int main()
         int temp2 = amt - ((amt / 100) * 100);
         temp = temp2 - ((temp2 / 50) * 50);
         cout << temp / 20 << " notes of 20 is needed at max.\n";
-        break;
+        // break;
 
     case 4:
-        
-        cout << amt / 1 << " notes of 1 is needed at max.\n";
-        break;
+        int temp2 = amt - ((amt / 100) * 100);
+        int temp3 = temp2 - ((temp2 / 50) * 50);
+        temp = temp3 - ((temp3/20) * 20);
+        cout << temp / 1 << " notes of 1 is needed at max.\n";
+        // break;
 
     default:
         cout << "Invalid choice" << endl;
