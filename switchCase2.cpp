@@ -17,28 +17,30 @@ int main()
     cin >> amt;
     cout << "Total no. of \n1. 100 Rs\n2. 50 Rs\n3. 20 Rs \n4. 1 Rs\nChoose one: ";
     cin >> choice;
-    temp = amt;
-    switch (choice)
+
+    temp2 = amt - ((amt / 100) * 100);
+    temp3 = temp2 - ((temp2 / 50) * 50);
+    temp = temp3 - ((temp3 / 20) * 20);
+
+    switch (1)
     {
     case 1:
-        cout << temp / 100 << " notes of 100 is needed at max.\n";
+        cout << amt / 100 << " notes of 100 is needed at max.\n";
         // break;
 
     case 2:
-        temp = amt - ((amt / 100) * 100);
-        cout << temp / 50 << " notes of 50 is needed at max.\n";
+        // temp = amt - ((amt / 100) * 100);
+        cout << temp2 / 50 << " notes of 50 is needed at max.\n";
         // break;
 
     case 3:
-        temp2 = amt - ((amt / 100) * 100);
-        temp = temp2 - ((temp2 / 50) * 50);
-        cout << temp / 20 << " notes of 20 is needed at max.\n";
+        // temp2 = amt - ((amt / 100) * 100);
+        // temp = temp2 - ((temp2 / 50) * 50);
+        cout << temp3 / 20 << " notes of 20 is needed at max.\n";
         // break;
 
     case 4:
-        temp2 = amt - ((amt / 100) * 100);
-        temp3 = temp2 - ((temp2 / 50) * 50);
-        temp = temp3 - ((temp3 / 20) * 20);
+
         cout << temp / 1 << " notes of 1 is needed at max.\n";
         break;
 
