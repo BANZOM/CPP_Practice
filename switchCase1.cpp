@@ -22,7 +22,7 @@ int main()
         switch (i)
         {
         case 5:
-            exit(0);  
+            exit(0);  // we can also use _Exit(int value); 
 
         default:
             cout << "The value of i is " << i << endl;
