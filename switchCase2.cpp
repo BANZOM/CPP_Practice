@@ -42,3 +42,16 @@ int main()
     }
     return 0;
 }
+
+/** output */
+// Enter the amount: 4578 
+// Total no. of 
+// 1. 100 Rs
+// 2. 50 Rs
+// 3. 20 Rs 
+// 4. 1 Rs
+// Choose one: 1
+// 45 notes of 100 is needed at max.
+// 1 notes of 50 is needed at max.
+// 1 notes of 20 is needed at max.
+// 8 notes of 1 is needed at max.
