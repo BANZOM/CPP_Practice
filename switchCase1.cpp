@@ -32,3 +32,10 @@ int main()
     cout << "Loop is terminated" << endl;
     return 0;
 }
+
+// My output: //
+// Loop begins
+// The value of i is 1
+// The value of i is 2
+// The value of i is 3
+// The value of i is 4
