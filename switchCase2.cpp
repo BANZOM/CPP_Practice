@@ -12,31 +12,31 @@
 using namespace std;
 int main()
 {
-    int amt, choice;
+    int amt, choice, temp;
     cout << "Enter the amount: ";
     cin >> amt;
     cout << "Total no. of \n1. 100 Rs\n2. 50 Rs\n3. 20 Rs \n4. 1 Rs\nChoose one: ";
     cin >> choice;
+    temp = amt;
     switch (choice)
     {
     case 1:
-        cout << amt / 100 << " notes of 100 is needed at max.\n";
-        break;
+        cout << temp / 100 << " notes of 100 is needed at max.\n";
+        // break;
 
     case 2:
-        amt = amt - ((amt / 100) * 100);
-        cout << amt / 50 << " notes of 50 is needed at max.\n";
-        break;
+        temp = amt - ((amt / 100) * 100);
+        cout << temp / 50 << " notes of 50 is needed at max.\n";
+        // break;
 
     case 3:
-        // amt = am;
-        cout << amt / 20 << " notes of 20 is needed at max.\n";
+        int temp2 = amt - ((amt / 100) * 100);
+        temp = temp2 - ((temp2 / 50) * 50);
+        cout << temp / 20 << " notes of 20 is needed at max.\n";
         break;
 
     case 4:
-        amt = amt / 100;
-        amt = amt / 50;
-        amt = amt / 20;
+        
         cout << amt / 1 << " notes of 1 is needed at max.\n";
         break;
 
