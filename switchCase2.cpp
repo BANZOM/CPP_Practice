@@ -26,26 +26,19 @@ int main()
     {
     case 1:
         cout << amt / 100 << " notes of 100 is needed at max.\n";
-        // break;
 
     case 2:
-        // temp = amt - ((amt / 100) * 100);
         cout << temp2 / 50 << " notes of 50 is needed at max.\n";
-        // break;
 
     case 3:
-        // temp2 = amt - ((amt / 100) * 100);
-        // temp = temp2 - ((temp2 / 50) * 50);
         cout << temp3 / 20 << " notes of 20 is needed at max.\n";
-        // break;
 
     case 4:
-
         cout << temp / 1 << " notes of 1 is needed at max.\n";
         break;
 
     default:
         cout << "Invalid choice" << endl;
-        break;
     }
+    return 0;
 }
