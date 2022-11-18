@@ -7,7 +7,6 @@ int printSum(int a[], int n)
     {
         sum += a[i];
     }
-
     return sum;
 }
 int main(int argc, char const *argv[])
@@ -21,7 +20,7 @@ int main(int argc, char const *argv[])
         cin >> arr[i];
         sum += arr[i];
     }
-    cout << sum;
+    // cout << sum;
     cout << "The Sum of elements is: " << printSum(arr, len) << endl;
 
     return 0;
