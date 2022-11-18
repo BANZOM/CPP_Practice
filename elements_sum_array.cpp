@@ -3,6 +3,11 @@ using namespace std;
 int printSum(int a[], int n)
 {
     int sum = 0;
+    for (int i = 0; i < n; i++)
+    {
+        sum += a[i];
+    }
+
     return sum;
 }
 int main(int argc, char const *argv[])
