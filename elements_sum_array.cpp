@@ -12,15 +12,16 @@ int printSum(int a[], int n)
 }
 int main(int argc, char const *argv[])
 {
-    int len, arr[100];
+    int len, arr[100], sum = 0;
     cin >> len;
 
     // read array
     for (int i = 0; i < len; i++)
     {
         cin >> arr[i];
+        sum += arr[i];
     }
-
+    cout << sum;
     cout << "The Sum of elements is: " << printSum(arr, len) << endl;
 
     return 0;
