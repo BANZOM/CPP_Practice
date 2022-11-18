@@ -39,3 +39,18 @@ int main(int argc, char const *argv[])
     cout << "Min Element is = " << getMin(arr, size) << endl;
     return 0;
 }
+
+
+/**
+ * @brief 
+ * we can use both
+ * min(a,b) to get the minimum from a or b
+ * max(a,b) to get the maximum from a or b
+ * 
+ * or
+ * 
+ * the if statement
+ * if(a>b) min = b
+ * and so on
+ * 
+ */
