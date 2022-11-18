@@ -35,7 +35,7 @@ int main(int argc, char const *argv[])
     cout << "Enter the elements: ";
     readArray(arr, size);
 
-    // cout << "Max Element is = " << getMax(arr, size) << endl;
-    // cout << "Min Element is = " << getMin(arr, size) << endl;
+    cout << "Max Element is = " << getMax(arr, size) << endl;
+    cout << "Min Element is = " << getMin(arr, size) << endl;
     return 0;
 }
