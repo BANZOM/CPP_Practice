@@ -16,9 +16,21 @@ void printArray(int a[], int n)
     }
     cout << endl;
 }
+void swap(int *a, int *b)
+{
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
 void alternateSwap(int a[], int n)
 {
-    
+    for (int i = 0; i < n; i += 2)
+    {
+        if (i != n - 1)
+        {
+            swap(&a[i], &a[i + 1]);
+        }
+    }
 }
 int main(int argc, char const *argv[])
 {
