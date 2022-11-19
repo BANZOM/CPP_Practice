@@ -4,7 +4,7 @@ void readArray(int a[], int n)
 {
     for (int i = 0; i < n; i++)
     {
-        cout << "Enter element at index " << i << ": ";
+        // cout << "Enter element at index " << i << ": ";
         cin >> a[i];
     }
 }
@@ -43,6 +43,17 @@ int returnUnique(int a[], int n)
     }
     return -1;
 }
+
+// optimize solution for this problem:
+int returnXOR(int a[], int n)
+{
+    int element = 0;
+    for (int i = 0; i < n; i++)
+    {
+        element = element ^ a[i];
+    }
+    return element;
+}
 int main(int argc, char const *argv[])
 {
     int size, arr[100];
@@ -59,5 +70,17 @@ int main(int argc, char const *argv[])
      */
 
     cout << "The Unique element is(-1 if not found): " << returnUnique(arr, size) << endl;
+
+    // optimize
+    cout << "From optimize method: " << returnXOR(arr, size) << endl;
     return 0;
 }
+
+/**
+ * @brief
+Enter the no. of elements: 7
+3 6 6 4 4 1 1
+The Unique element is(-1 if not found): 3
+From optimize method: 3
+ *
+ */
