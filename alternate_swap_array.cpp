@@ -49,3 +49,16 @@ int main(int argc, char const *argv[])
     printArray(arr, n);
     return 0;
 }
+
+/**
+ * @brief 
+Enter the no. of elements: 5
+Enter element at index 0: 32
+Enter element at index 1: 23
+Enter element at index 2: 45
+Enter element at index 3: 54
+Enter element at index 4: 99
+Before Alternate swap: 32 23 45 54 99 
+After Alternate swap: 23 32 54 45 99 
+ * 
+ */
