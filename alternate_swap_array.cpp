@@ -16,6 +16,10 @@ void printArray(int a[], int n)
     }
     cout << endl;
 }
+void alternateSwap(int a[], int n)
+{
+    
+}
 int main(int argc, char const *argv[])
 {
     int n, arr[100];
@@ -26,5 +30,10 @@ int main(int argc, char const *argv[])
     cout << "Before Alternate swap: ";
     printArray(arr, n);
 
+    // alternate swap
+    alternateSwap(arr, n);
+
+    cout << "After Alternate swap: ";
+    printArray(arr, n);
     return 0;
 }
