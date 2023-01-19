@@ -8,17 +8,18 @@ class Solution {
 public:
     bool uniqueOccurrences(vector<int>& arr) {
         
-        unordered_map<int,int> mp;
-        unordered_set<int> set;
+        unordered_map<int,int> mp;  // for map
+        unordered_set<int> set;  // for set
 
         for(auto num:arr)
-            mp[num]++;
+            mp[num]++;  // storing the frequencies
         
         for(auto it:mp){
             int freq = it.second;
-            set.insert(freq);
+            set.insert(freq);  // storing the count in a set
         }
         
-        return mp.size() == set.size() ;
+        return mp.size() == set.size() ;  // if set size is equal to map size then it means no two values have the same number of occurrences.
+
     }
 };
