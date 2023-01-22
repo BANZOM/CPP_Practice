@@ -15,5 +15,6 @@ Explanation:
 
 #include <bits/stdc++.h> 
 vector<vector<int>> findTriplets(vector<int>arr, int n, int K) {
-	// Write your code here.
+	
+	sort(arr.begin(), arr.end());  // sorting the array to make it easy to implement 2 pointer approach
 }
