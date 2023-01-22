@@ -12,3 +12,8 @@ Sample Output:
 Explanation:
 5 5 2 is the only triplet that adds up to 15. Note that the order of the output doesn’t matter, so 5 2 5 or 2 5 5 is also acceptable.
 */
+
+#include <bits/stdc++.h> 
+vector<vector<int>> findTriplets(vector<int>arr, int n, int K) {
+	// Write your code here.
+}
