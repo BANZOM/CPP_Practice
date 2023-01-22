@@ -17,4 +17,10 @@ Explanation:
 vector<vector<int>> findTriplets(vector<int>arr, int n, int K) {
 	
 	sort(arr.begin(), arr.end());  // sorting the array to make it easy to implement 2 pointer approach
+	
+	vector<vector<int>> answer; // store answers
+	
+	for(int i=0; i<n; i++){
+		int left = i+1;, right = n-1;
+	}
 }
