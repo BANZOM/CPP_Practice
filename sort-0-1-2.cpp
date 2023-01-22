@@ -1,4 +1,5 @@
 /*
+Dutch Flag Algorithm:
 Input: 0 1 2 2 1 0
 output: 0 0 1 1 2 2
 */
