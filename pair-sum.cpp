@@ -15,3 +15,19 @@ vector<vector<int>> pairSum(vector<int> &arr, int s){
    sort(ans.begin(), ans.end());
    return ans;
 }
+
+
+/*
+Sample input:
+5 5
+1 2 3 4 5
+
+Sample output:
+1 4
+2 3
+
+
+Here, 1 + 4 = 5
+      2 + 3 = 5
+Hence the output will be, (1,4) , (2,3).
+*/
