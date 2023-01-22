@@ -35,6 +35,8 @@ vector<vector<int>> findTriplets(vector<int>arr, int n, int K) {
 			
 				while(arr[right] == arr[right-1] && left<right)
 					right--;
+			
+				left++,right--;
 			}
 			else if ( arr[i]+arr[left]+arr[right] < K)
 				left++;
