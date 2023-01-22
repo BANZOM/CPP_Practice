@@ -21,11 +21,11 @@ vector<vector<int>> findTriplets(vector<int>arr, int n, int K) {
 	vector<vector<int>> answer; // store answers
 	
 	for(int i=0; i<n; i++){
-		int left = i+1;, right = n-1;
+		int left = i+1, right = n-1;
 		
 		while(left<right){
-			if( arr[i]+arr[left]+arr[right] == k ){
-				ans.push_back({arr[i],arr[left],arr[right]});
+			if( arr[i]+arr[left]+arr[right] == K ){
+				answer.push_back({arr[i],arr[left],arr[right]});
 			
 				while(arr[left] == arr[left+1] && left<right)
 					left++;
@@ -33,13 +33,15 @@ vector<vector<int>> findTriplets(vector<int>arr, int n, int K) {
 				while(arr[right] == arr[right-1] && left<right)
 					right--;
 			}
-			else if ( arr[i]+arr[left]+arr[right] < k)
+			else if ( arr[i]+arr[left]+arr[right] < K)
 				left++;
 			else
 				right--;
 		}
 		
-		while(arr[i] == arr[i+1] && i<n-1)
+		while(arr[i] == arr[i+1] && i+1<n)
 			i++;
 	}
+
+	return answer;
 }
