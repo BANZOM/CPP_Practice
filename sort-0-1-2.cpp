@@ -1,3 +1,8 @@
+/*
+Input: 0 1 2 2 1 0
+output: 0 0 1 1 2 2
+*/
+
 #include <bits/stdc++.h> 
 void sort012(int *arr, int n)
 {
