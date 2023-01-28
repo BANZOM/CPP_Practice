@@ -4,23 +4,19 @@
 // C++ function to return that peak index:
 
 
-    int pivotIndex(vector<int>& nums) {
-        int len = nums.size();
-        if(len==0){
-            return -1;
-        }        
-        int totalSum=0,leftSum=0;
+int peakIndexInMountainArray(vector<int>& arr) {
+        int start = 0;
+        int end = arr.size()-1;
+        int ans = 0;
+        int mid = start + (end-start)/2;
 
-        for(int i=0; i<len;i++)
-            totalSum+=nums[i];
-        
-        for(int i=0; i<len; i++){
-            if(leftSum==(totalSum-nums[i]))
-                return i;
-            else{
-                leftSum+=nums[i];
-                totalSum-=nums[i];
-            }
+        while(start<end){
+            if(arr[mid] < arr[mid+1])
+                start=mid+1;
+            else if(arr[mid] > arr[mid+1])
+                end = mid;
+            mid = start + (end-start)/2;
         }
-        return -1;
+
+        return mid;
     }
