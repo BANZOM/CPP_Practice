@@ -2,9 +2,12 @@
 using namespace std;
 
 int first = -1, last = -1;
+
 void firstOccr(int arr[], int left, int right, int key)
 {
     int mid = left + (right - left) / 2;
+    if(left>right)
+        return;
     if (key == arr[mid])
     {
         first = mid;
@@ -20,10 +23,12 @@ void firstOccr(int arr[], int left, int right, int key)
         firstOccr(arr,left,mid-1,key);
     }
 }
+
 int lastOccr(int arr[], int left, int right, int key)
 {
     return -1;
 }
+
 int main()
 {
     int n, arr[1000], key;
@@ -36,7 +41,10 @@ int main()
     }
     cout << "Enter the element to search: ";
     cin >> key;
-    cout << "First occurance is " << first << ", Last occurance is " << last << endl;
+
+    firstOccr(arr,0,n-1,key);
+
+    cout << "First occurance is at index " << first << ", Last occurance is at index " << last << endl;
 
     return 0;
 }
