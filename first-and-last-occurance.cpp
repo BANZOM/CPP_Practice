@@ -19,8 +19,6 @@ void firstOccr(int arr[], int left, int right, int key)
     {
         firstOccr(arr,left,mid-1,key);
     }
-    
-    return -1;
 }
 int lastOccr(int arr[], int left, int right, int key)
 {
