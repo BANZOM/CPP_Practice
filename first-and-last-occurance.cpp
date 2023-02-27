@@ -6,27 +6,45 @@ int first = -1, last = -1;
 void firstOccr(int arr[], int left, int right, int key)
 {
     int mid = left + (right - left) / 2;
-    if(left>right)
+    if (left > right)
         return;
+
     if (key == arr[mid])
     {
         first = mid;
         // go left
-        firstOccr(arr,left,mid-1,key);
+        firstOccr(arr, left, mid - 1, key);
     }
     else if (key > arr[mid])
     {
-        firstOccr(arr,mid+1,right,key);
+        firstOccr(arr, mid + 1, right, key);
     }
     else
     {
-        firstOccr(arr,left,mid-1,key);
+        firstOccr(arr, left, mid - 1, key);
     }
 }
 
-int lastOccr(int arr[], int left, int right, int key)
+void lastOccr(int arr[], int left, int right, int key)
 {
-    return -1;
+    int mid = left + (right - left) / 2;
+    if (left > right)
+        return;
+
+    if (key == arr[mid])
+    {
+        last = mid;
+        // go right
+        lastOccr(arr, mid + 1, right, key);
+    }
+    else if (key > arr[mid])
+    {
+        lastOccr(arr, mid + 1, right, key);
+    }
+    else
+    {
+        lastOccr(arr, left, mid - 1, key);
+    }
 }
 
 int main()
@@ -42,7 +60,8 @@ int main()
     cout << "Enter the element to search: ";
     cin >> key;
 
-    firstOccr(arr,0,n-1,key);
+    firstOccr(arr, 0, n - 1, key);
+    lastOccr(arr, 0, n - 1, key);
 
     cout << "First occurance is at index " << first << ", Last occurance is at index " << last << endl;
 
