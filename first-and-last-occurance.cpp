@@ -1,9 +1,18 @@
 #include <iostream>
 using namespace std;
 
-int firstOccr(int arr[], int left, int right, int key)
+int first = -1, last = -1;
+void firstOccr(int arr[], int left, int right, int key)
 {
-
+    int mid = left + (right - left) / 2;
+    if (key == arr[mid])
+    {
+        first = mid;
+        // go left
+    }
+    else if (key > arr[mid])
+    {
+    }
     return -1;
 }
 int lastOccr(int arr[], int left, int right, int key)
@@ -22,7 +31,7 @@ int main()
     }
     cout << "Enter the element to search: ";
     cin >> key;
-    cout << "First occurance is " << firstOccr(arr, 0, n - 1, key) << ", Last occurance is " << lastOccr(arr, 0, n - 1, key) << endl;
+    cout << "First occurance is " << first << ", Last occurance is " << last << endl;
 
     return 0;
 }
