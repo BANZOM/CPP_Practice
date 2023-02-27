@@ -9,10 +9,17 @@ void firstOccr(int arr[], int left, int right, int key)
     {
         first = mid;
         // go left
+        firstOccr(arr,left,mid-1,key);
     }
     else if (key > arr[mid])
     {
+        firstOccr(arr,mid+1,right,key);
     }
+    else
+    {
+        firstOccr(arr,left,mid-1,key);
+    }
+    
     return -1;
 }
 int lastOccr(int arr[], int left, int right, int key)
