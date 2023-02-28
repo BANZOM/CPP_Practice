@@ -1,4 +1,4 @@
-name: Reviewer
+name: Codeball
 on:
   pull_request: {}
   pull_request_review_comment:
@@ -7,9 +7,9 @@ on:
 jobs:
   codeball_job:
     runs-on: ubuntu-latest
-    name: BaM Reviewer
+    name: Codeball
     steps:
-      - name: BaM Reviewer
+      - name: Codeball
         uses: sturdy-dev/codeball-action@v2
         with:
           approvePullRequests: "true"
