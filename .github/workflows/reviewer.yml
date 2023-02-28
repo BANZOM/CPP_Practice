@@ -1,0 +1,18 @@
+name: Reviewer
+on:
+  pull_request: {}
+  pull_request_review_comment:
+    types: [created, edited]
+
+jobs:
+  codeball_job:
+    runs-on: ubuntu-latest
+    name: BaM Reviewer
+    steps:
+      - name: BaM Reviewer
+        uses: sturdy-dev/codeball-action@v2
+        with:
+          approvePullRequests: "true"
+          labelPullRequestsWhenApproved: "true"
+          labelPullRequestsWhenReviewNeeded: "false"
+          failJobsWhenReviewNeeded: "false"
