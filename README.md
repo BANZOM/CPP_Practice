@@ -1,7 +1,4 @@
 
 # C++ PRACTICE PROGRAMS
 
-In order to inhance coding and logic buidling skills one must need to practice Problem Solving on daily basis, 
-
-and So am i.
-
+To improve coding and logic building skills, one must practise problem solving on a daily basis, which I am doing here.
