@@ -64,6 +64,6 @@ int main()
     lastOccr(arr, 0, n - 1, key);
 
     cout << "First occurance is at index " << first << ", Last occurance is at index " << last << endl;
-
+    cout << "Total number of occurance = " << last - first << endl;
     return 0;
 }
