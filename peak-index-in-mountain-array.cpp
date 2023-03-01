@@ -3,7 +3,26 @@ using namespace std;
 
 int findMountainPeak(int arr[], int n)
 {
-    
+    // using binary search approach
+    int peak;
+    int left = 0, right = n - 1;
+    int mid = left + (right - left) / 2;
+    while (left < right)
+    {
+        if (arr[mid] > arr[mid + 1])
+        {
+            right = mid;
+        }
+        if (arr[mid] < arr[mid + 1])
+        {
+            left = mid + 1;
+        }
+
+        // updating the mid
+        mid = left + (right - left) / 2;
+    }
+
+    return mid;
 }
 
 int main()
