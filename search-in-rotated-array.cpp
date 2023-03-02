@@ -39,7 +39,7 @@ int findIndex(int *arr, int n, int key)
 {
     int pivot = findPivot(arr, n);
 
-    if ()
+    
 }
 
 int main()
