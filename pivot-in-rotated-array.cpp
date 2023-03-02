@@ -21,12 +21,13 @@ int findPivot(int *arr, int n)
         mid = left + (right - left) / 2;
     }
 
-    return mid;
+    return mid; 
+    // return left; // also works
 }
 
 int main()
 {
-    int arr[] = {5,9,2,3,4};
+    int arr[] = {2,3,4,5,1};
     int n = 5;
 
     cout << "The Pivot index is " << findPivot(arr, n) << endl;
