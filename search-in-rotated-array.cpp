@@ -3,6 +3,7 @@ using namespace std;
 
 int findIndex(int *arr, int n, int key)
 {
+    int pivot = findPivot(arr,n);
 }
 int main()
 {
