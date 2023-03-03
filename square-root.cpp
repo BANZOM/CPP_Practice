@@ -1,9 +1,9 @@
 #include <iostream>
 using namespace std;
 
-double findRoot(int n)
+double findRoot(long long int n)
 {
-    int start = 0, end = n / 2 + 1;
+    long long int start = 0, end = n / 2 + 1;
     int root = 0;
     while (start <= end)
     {
@@ -22,7 +22,7 @@ double findRoot(int n)
 
 int main()
 {
-    int n = 50;
+    long long int n = 50;
 
     cout << "The Root of " << n << " is " << findRoot(n) << endl;
 
