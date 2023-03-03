@@ -9,7 +9,7 @@ double preciseRoot (long long int n, double root, int precision)
     {
         c = c * 0.1;
         // cout << c << endl;
-        while ((root+c)*(root+c) <= (double)n)
+        while ((root+c) <= ((double)n)/(root+c))
         {
             root = root + c;
         }
@@ -27,7 +27,7 @@ double findRoot(long long int n)
     while (start <= end)
     {
         int mid = start + (end - start) / 2;
-        if (mid * mid <= n)
+        if (mid <= n/mid)
         {
             root = mid;
             start = mid + 1;
@@ -41,7 +41,7 @@ double findRoot(long long int n)
 
 int main()
 {
-    long long int n = 3;
+    long long int n = 10;
 
     cout << "The Root of " << n << " is " << findRoot(n) << endl;
 
