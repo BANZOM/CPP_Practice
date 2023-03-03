@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+// preciseRoot -> Give precise value
 double preciseRoot (long long int n, double root, int precision)
 {
     float c = 1;
@@ -18,6 +19,7 @@ double preciseRoot (long long int n, double root, int precision)
     return root;
 }
 
+// findRoot -> Gives floor value
 double findRoot(long long int n)
 {
     long long int start = 0, end = n / 2 + 1;
