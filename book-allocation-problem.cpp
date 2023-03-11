@@ -9,9 +9,30 @@ Output:
 Return that minimum possible number.
 */
 
+int isPossibleSolution(int *A, int n, int S, int mid)
+{
+}
+
 int allocateBook(int *A, int n, int S)
 {
     int ans = -1;
+    int left = 0, right = 0;
+
+    for (int i = 0; i < n; i++)
+        right += A[i]; // this is the search space
+
+    while (left <= right)
+    {
+        int mid = left + (right - left) / 2;
+        if (isPossibleSolution(A, n, S, mid))
+        {
+            ans = mid;
+            right = mid - 1;
+        }
+        else
+            left = mid + 1;
+    }
+
     return ans;
 }
 
