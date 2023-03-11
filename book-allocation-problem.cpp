@@ -11,5 +11,12 @@ Return that minimum possible number.
 
 int main()
 {
-     
+    int A[100];
+    int n, S;
+
+    cin >> n >> S;
+    for (int i = 0; i < n; i++)
+    {
+        cin >> A[i];
+    }
 }
