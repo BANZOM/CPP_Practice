@@ -1,4 +1,5 @@
 #include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 /*
 Input:
@@ -9,9 +10,33 @@ Output:
 Return that minimum distance between any two cows is maximum
 */
 
+bool isPossible(int *A, int n, int C, int mid)
+{
+
+    return false;
+}
 int aggressiveCows(int *A, int n, int C)
 {
     int ans = -1;
+
+    // sort the array of stalls
+    sort(A, A + n);
+
+    int start = 0, end = A[n - 1];
+
+    // binary loop logic
+    while (start <= end)
+    {
+        int mid = start + (end - start) / 2;
+        if (isPossible(A, n, C, mid))
+        {
+            ans = mid;
+            start = mid + 1;
+        }
+        else
+            end = mid - 1;
+    }
+
     return ans;
 }
 
