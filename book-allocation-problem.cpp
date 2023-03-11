@@ -9,6 +9,12 @@ Output:
 Return that minimum possible number.
 */
 
+int allocateBook(int *A, int n, int S)
+{
+    int ans = -1;
+    return ans;
+}
+
 int main()
 {
     int A[100];
@@ -19,4 +25,6 @@ int main()
     {
         cin >> A[i];
     }
+
+    cout << "Answer = " << allocateBook(A, n, S) << endl;
 }
