@@ -12,6 +12,20 @@ Return that minimum distance between any two cows is maximum
 
 bool isPossible(int *A, int n, int C, int mid)
 {
+    int cowsCount = 1, pos = A[0];
+
+    for (int i = 0; i < n; i++)
+    {
+        if (A[i] - pos >= mid)
+        {
+            cowsCount++;
+
+            if(cowsCount == C)
+                return true;
+            
+            pos = A[i];
+        }
+    }
 
     return false;
 }
