@@ -10,30 +10,28 @@
 #include <iostream>
 
 using namespace std;
-//code here
+// code here
 int main()
 {
     int column;
-    cin>>column;
-    
-    for (int i = 1; i <= column; i++) {
-        
-        
-        for (int k = 1; k <= column; k++) {
-            
-            
-            if( k<i )
+    cin >> column;
+
+    for (int i = 1; i <= column; i++)
+    {
+
+        for (int k = 1; k <= column; k++)
+        {
+
+            if (k < i)
             {
-                cout<<" ";
+                cout << " ";
             }
-            
+
             else
-                cout<<"*";
-            
+                cout << "*";
         }
-        cout<<endl;
+        cout << endl;
     }
 
     return 0;
 }
-
